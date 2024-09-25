@@ -1,7 +1,14 @@
+
+//Componentens
+import BoxListBackGround from './components/BoxListBackGround'
+
+//CSS
+import './css/App.css'
+
 export default function App(){
     return(
         <div>
-            <h1>Hello World</h1>
+           <BoxListBackGround/> 
         </div>
     )
 }

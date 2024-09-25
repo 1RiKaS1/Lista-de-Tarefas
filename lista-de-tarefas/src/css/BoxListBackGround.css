@@ -1,0 +1,10 @@
+.boxList_backGround{
+    background-color: var(--pine);
+    width: 100%;  /* Largura do componente igual à mostrada na imagem */
+    height: 900px; /* Altura do componente */
+    border-radius: 16px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Coloca os itens dentro do container em coluna */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
