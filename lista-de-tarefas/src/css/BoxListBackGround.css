@@ -1,15 +1,111 @@
-.card{
-    background-color: var(--pine);  
-    height: 100%; 
-    margin-top: 46px;
-    margin-bottom: 46px;
-    border-radius: 16px; 
-    padding: 20px; 
-    display: flex;
-    flex-direction: column; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+/* Contêiner principal do cartão */
+.card {
+  width: 400px; /* Largura fixa do card */
+  padding: 20px;
+  border-radius: 16px; /* Bordas mais arredondadas para o design */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o card */
+  background-color: var(--pine); /* Cor de fundo mais escura */
+  position: relative;
+  margin: 20px auto; /* Centralizar o card na tela */
+  color: #fff; /* Texto branco */
 }
 
-.titulo{
-    color: var(--anti-flash-white);
+/* Cabeçalho do cartão */
+.card-header {
+  margin-bottom: 20px;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.horario {
+  font-size: 0.875rem;
+  color: var(--anti-flash-white);
+  margin: 0;
+}
+
+/* Contêiner para as notas em coluna */
+.notes-container {
+  display: flex;
+  flex-direction: column; /* Alinhar as notas em coluna */
+  gap: 20px; /* Espaçamento vertical entre as notas */
+  padding: 10px 0;
+  max-height: 400px; /* Definir uma altura máxima, se necessário */
+  overflow-y: auto; /* Habilitar rolagem vertical se as notas ultrapassarem a altura do contêiner */
+  overflow-x: hidden; /* Certificar que não tenha rolagem horizontal */
+}
+
+/* Estilo individual para cada note box */
+.note-box {
+  width: 100%; /* Ocupar toda a largura disponível do contêiner */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.note-box:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Efeito de hover */
+}
+
+.note-box h2 {
+  font-size: 1.25rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.note-box p {
+  font-size: 1rem;
+  color:var(--anti-flash-white);
+  margin: 0;
+}
+
+/* Botão fixo para adicionar nota */
+.add-box {
+  position: fixed;
+  bottom: 20px; /* Fixo na parte inferior */
+  right: 20px; /* Fixo à direita */
+  background-color: #4caf50;
+  padding: 15px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Garantir que fique acima do conteúdo */
+}
+
+.add-box button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-box:hover {
+  background-color: #45a049; /* Efeito de hover no botão */
+}
+
+/* Customização da barra de rolagem (opcional) */
+.notes-container::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem vertical */
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor do indicador de rolagem */
+  border-radius: 10px;
+}
+
+.notes-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor do indicador de rolagem ao passar o mouse */
 }
