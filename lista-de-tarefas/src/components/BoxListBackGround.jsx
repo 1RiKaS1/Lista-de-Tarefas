@@ -8,24 +8,6 @@ import Modal from "./Modal"; // Importar o modal
 
 export default function BoxListBackGround() {
   const [notes, setNotes] = useState([
-    {
-      key: 1,
-      title: "Atividade 1",
-      text: "Criar funcionalidade X no sistema",
-      isCompleted: false,
-    },
-    {
-      key: 2,
-      title: "Atividade 2",
-      text: "Criar funcionalidade X no sistema",
-      isCompleted: false,
-    },
-    {
-      key: 3,
-      title: "Atividade 3",
-      text: "Criar funcionalidade X no sistema",
-      isCompleted: false,
-    },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,7 +36,7 @@ export default function BoxListBackGround() {
       {/* Slide bar de notas */}
       <div className="notes-container">
         {notes.map((note) => (
-          <div key={note.key} className="note-box">
+          <div key={note.key} >
             <NoteBox note={note} />
           </div>
         ))}

@@ -1,5 +1,4 @@
 .addBox_background{
-    background-color: var(--pine);  
     margin-top: 46px;
     margin-bottom: 16px;
     border-radius: 16px; 
@@ -9,4 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.addBox_button{
+    border: none;
+}
+.addBox_button :hover{
+    cursor: pointer; 
 }
