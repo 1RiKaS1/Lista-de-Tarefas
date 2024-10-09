@@ -1,36 +1,46 @@
 .noteBox-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 16px; 
-    padding: 20px; 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
-    background-color: var(--dark-green);
+    background-color: var(--dark-green); 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    width: 100%;
+    max-width: 95%;;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
 }
 
-.noteBox-container section {
-    display: flex;
-    flex-direction: column;
-    color: white;
+.noteBox-text {
+    max-width: 45%; 
+    text-align: left;
+    word-wrap: break-word; 
+    white-space: normal; 
 }
 
 .noteBox-container h1 {
     font-size: 24px;
     font-weight: bold;
-    margin: 0;
+    white-space: normal;
+    margin: 1rem 0;
 }
 
 .noteBox-container p {
     font-size: 14px;
-    margin-top: 10px;
+    margin: 1rem 0;
     color: rgba(255, 255, 255, 0.8);
+    word-wrap: break-word; 
+    white-space: normal; 
+    overflow-wrap: break-word; 
 }
 
 .checkBox {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-top: auto; 
 }
 
+.deleteIcon:hover {
+    cursor: pointer;
+}

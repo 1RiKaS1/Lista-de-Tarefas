@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+
 import "../css/BoxListBackGround.css";
 
 import NoteBox from "./NoteBox";
@@ -16,6 +16,10 @@ export default function BoxListBackGround() {
     setNotes([...notes, newNote]);
   };
 
+  const deleteNote = (noteKey) => {
+    setNotes(notes.filter(note => note.key !== noteKey));
+  };
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -29,7 +33,6 @@ export default function BoxListBackGround() {
       <header className="card-header">
         <section className="header-section">
           <h1 className="titulo">Lista de Atividades</h1>
-          <p className="horario">24/09/2024 - 12:00 pm</p>
         </section>
       </header>
 
@@ -37,7 +40,7 @@ export default function BoxListBackGround() {
       <div className="notes-container">
         {notes.map((note) => (
           <div key={note.key} >
-            <NoteBox note={note} />
+            <NoteBox note={note} deleteNote={deleteNote} />
           </div>
         ))}
       </div>

@@ -7,7 +7,10 @@ import "../css/AddBox.css";
 export default function AddBox({ openModal }) {
   return (
     <div className="addBox_background" onClick={openModal}>
-      <AddCircleIcon className="addBox_button" style={{ color: "var(--caribbean-green)" }}>
+      <AddCircleIcon
+        className="addBox_button"
+        style={{ color: "var(--caribbean-green)" }}
+      >
         add_circle
       </AddCircleIcon>
     </div>
